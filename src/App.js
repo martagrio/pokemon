@@ -56,10 +56,19 @@ getUserQuery(event) {
 						/>
 					);
 				}} />
-				<Route path = "/detail" component={PokeDetail} />
+				<Route path = "/detail/:pokeId" render={routerProps => {
+					return (
+						<PokeDetail 
+							routerProps ={routerProps}
+							pokemons = {pokemons}
+						/>
+					);
+				}}/>
 			 </Switch>	 
       </div>
     );
+
+	//Al segundo route le vamos a pasar props por lo que toca cambiar a render	y poner detail/:id
   }
 }
 

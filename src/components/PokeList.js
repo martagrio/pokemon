@@ -10,10 +10,10 @@ const PokeList = props => {
 			{pokemons
 				.filter(searched => searched.name.toLowerCase().includes(query.toLowerCase()))
 				.map(pokemon => {
-					//El link se le pone dentro del div, no del li.
+					//El link se le pone dentro del div, no del li. Vamos a hacer que cada pokemon tenga una ruta diferente
 					return (
 						<li className="pokemon" key={pokemon.id}>
-							<Link to ="/detail" className="pokemon__link">
+							<Link to ={`/detail/${pokemon.id}`} className="pokemon__link">
 								<PokeCard 
 									name = {pokemon.name}
 									url = {pokemon.url}
