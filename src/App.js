@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
 import {fetchPokemons} from './services/fetchPokemons';
-import PokeList from './components/PokeList';
-import Filter from './components/Filter';
+import {Switch, Route} from 'react-router-dom';
+import Home from './components/Home';
+import PokeDetail from './components/PokeDetail';
 
 class App extends React.Component {
   constructor(props) {
@@ -36,22 +37,32 @@ getUserQuery(event) {
 	this.setState({query: query});
 }
 
+
   render() {
 		const {pokemons, query} = this.state;
+		//cuando no recibe props, componente, si recibe props, render
+
     return (
       <div className="app">
        <h1 className="app__title">my list of pokemon</h1>
-			 <Filter 
-			 	getUserQuery = {this.getUserQuery} 
-				query = {query}
-			 />
-			 <PokeList 
-			  pokemons = {pokemons}
-				query = {query} 
-			 />
+			 
+			 <Switch>
+				<Route exact path = "/" render= {() => {
+					return (
+						<Home
+							getUserQuery = {this.getUserQuery} 
+							query = {query}
+							pokemons = {pokemons} 
+						/>
+					);
+				}} />
+				<Route path = "/detail" component={PokeDetail} />
+			 </Switch>	 
       </div>
     );
   }
 }
 
 export default App;
+
+
