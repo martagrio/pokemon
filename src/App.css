@@ -3,4 +3,7 @@
 	background-color: rgb(211, 130, 130);
 	padding: 10px 30px;
 	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }

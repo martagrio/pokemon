@@ -1,0 +1,11 @@
+.card{
+		text-transform: capitalize;
+}
+
+.card__name {
+	margin: 5px;
+}
+
+.card__img {
+	width: 200px;
+}
