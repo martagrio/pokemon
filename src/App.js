@@ -44,8 +44,6 @@ getUserQuery(event) {
 
     return (
       <div className="app">
-       <h1 className="app__title">my list of pokemon</h1>
-			 
 			 <Switch>
 				<Route exact path = "/" render= {() => {
 					return (

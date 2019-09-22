@@ -1,4 +1,6 @@
 
 .app {
-	background-color: red;
+	background-color: rgb(211, 130, 130);
+	padding: 10px 30px;
+	margin: 0;
 }

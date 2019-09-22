@@ -1,0 +1,6 @@
+.app__title {
+	font-size: 34px;
+	font-weight: 700;
+	color: rgba(68, 19, 46, 0.966);
+	text-transform: capitalize;
+}

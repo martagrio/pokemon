@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PokeCard from './PokeCard';
 import {Link} from 'react-router-dom';
+import '../css/PokeList.css';
 
 const PokeList = props => {
 	const {pokemons, query} = props;
